@@ -30,6 +30,7 @@ setInterval(() => {
 
 getWeatherData()
 function getWeatherData () {
+    console.log("hello")
     navigator.geolocation.getCurrentPosition((success) => {
         
         let {latitude, longitude } = success.coords;
@@ -48,6 +49,8 @@ function showWeatherData (data){
 
     timezone.innerHTML = data.timezone;
     countryEl.innerHTML = data.lat + 'N ' + data.lon+'E'
+
+    console.log(humidity)
 
     currentWeatherItemsEl.innerHTML = 
     `<div class="weather-item">
